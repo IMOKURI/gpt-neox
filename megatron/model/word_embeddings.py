@@ -204,7 +204,7 @@ class SoftEmbedding(torch.nn.Module):
                     : self.n_tokens, :
                 ]  # pad up to n_tokens
             return embeds
-        return torch.Tensor(n_tokens, neox_args.hidden_size).uniform_(
+        return torch.Tensor(self.n_tokens, self.neox_args.hidden_size).uniform_(
             -self.random_range, self.random_range
         )
 
