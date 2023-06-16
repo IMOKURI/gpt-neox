@@ -191,7 +191,7 @@ class SoftEmbedding(torch.nn.Module):
             self.initialize_embedding(wte)
         )
 
-    def initialize_embedding(self):
+    def initialize_embedding(self, wte):
         if self.init_string:
             embeds = torch.LongTensor(
                 self.neox_args.tokenizer.tokenize(self.init_string)
